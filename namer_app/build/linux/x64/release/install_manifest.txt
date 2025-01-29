@@ -1,0 +1,11 @@
+/home/coffeelipe/Projects/personal/flutter-codelab/namer_app/build/linux/x64/release/bundle/namer_app
+/home/coffeelipe/Projects/personal/flutter-codelab/namer_app/build/linux/x64/release/bundle/data/icudtl.dat
+/home/coffeelipe/Projects/personal/flutter-codelab/namer_app/build/linux/x64/release/bundle/lib/libflutter_linux_gtk.so
+/home/coffeelipe/Projects/personal/flutter-codelab/namer_app/build/linux/x64/release/bundle/data/flutter_assets/AssetManifest.bin
+/home/coffeelipe/Projects/personal/flutter-codelab/namer_app/build/linux/x64/release/bundle/data/flutter_assets/AssetManifest.json
+/home/coffeelipe/Projects/personal/flutter-codelab/namer_app/build/linux/x64/release/bundle/data/flutter_assets/FontManifest.json
+/home/coffeelipe/Projects/personal/flutter-codelab/namer_app/build/linux/x64/release/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+/home/coffeelipe/Projects/personal/flutter-codelab/namer_app/build/linux/x64/release/bundle/data/flutter_assets/NOTICES.Z
+/home/coffeelipe/Projects/personal/flutter-codelab/namer_app/build/linux/x64/release/bundle/data/flutter_assets/shaders/ink_sparkle.frag
+/home/coffeelipe/Projects/personal/flutter-codelab/namer_app/build/linux/x64/release/bundle/data/flutter_assets/version.json
+/home/coffeelipe/Projects/personal/flutter-codelab/namer_app/build/linux/x64/release/bundle/lib/libapp.so
