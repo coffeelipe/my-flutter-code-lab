@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         title: 'Namer App',
         theme: ThemeData(
           useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+          colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(202, 255, 208, 0)),
         ),
         home: MyHomePage(),
       ),
@@ -42,6 +42,11 @@ class MyAppState extends ChangeNotifier {
     }
     notifyListeners();
   }
+
+  void deleteFavorite(var pair) {
+    favorites.remove(pair);
+    notifyListeners();
+  }
 }
 
 
@@ -63,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
         page = GeneratorPage();
         break;
       case 1:
-        page = Placeholder();
+        page = FavoritesPage();
         break;
       default:
         throw UnimplementedError('no widget for $selectedIndex');
@@ -149,6 +154,46 @@ class GeneratorPage extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class FavoritesPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var appState = context.watch<MyAppState>();
+
+    if (appState.favorites.isEmpty) {
+      return Center(
+        child: Text('No favorites yet.'),
+      );
+    }
+
+    return ListView(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(20),
+          child: Center(
+            child: Text(
+              'You have ${appState.favorites.length} favorites:',
+              style: Theme.of(context).textTheme.headlineMedium,
+            )
+          ),
+        ),
+        
+        for (var name in appState.favorites)
+          Row(
+            children: [
+              IconButton(
+                onPressed: () {
+                  appState.deleteFavorite(name);
+                }, 
+                icon: Icon(Icons.delete),
+              ),
+              Text(name.asPascalCase),
+            ],
+          ),
+      ],
     );
   }
 }
